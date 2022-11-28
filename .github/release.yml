@@ -31,27 +31,27 @@ changelog:
       - style
       - test
   categories:
-    added:
-      title: Added
-      labels:
-        - feature
-    changed:
-      title: Changed
-      labels:
-        - change
-    deprecated:
-      title: Deprecated
-      labels:
-        - deprecate
-    removed:
-      title: Removed
-      labels:
-        - remove
-    fixed:
-      title: Fixed
-      labels:
-        - fix
-    security:
-      title: Security
-      labels:
-        - security
+    - added:
+        title: Added
+        labels:
+          - feature
+    - changed:
+        title: Changed
+        labels:
+          - change
+    - deprecated:
+        title: Deprecated
+        labels:
+          - deprecate
+    - removed:
+        title: Removed
+        labels:
+          - remove
+    - fixed:
+        title: Fixed
+        labels:
+          - fix
+    - security:
+        title: Security
+        labels:
+          - security
