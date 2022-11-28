@@ -33,28 +33,28 @@ set -e
 ROOT_PATH=$PWD
 TEMP_PATH=/tmp/openssl
 
-# CONFIGURATIONS="darwin64-x86_64 darwin64-arm64 openssl-ios64 openssl-iossimulator openssl-iossimulator-arm openssl-catalyst openssl-catalyst-arm"
-# for CONFIGURATION in $CONFIGURATIONS; do
-#     echo "Building OpenSSL for $CONFIGURATION"
+CONFIGURATIONS="darwin64-x86_64 darwin64-arm64 openssl-ios64 openssl-iossimulator openssl-iossimulator-arm openssl-catalyst openssl-catalyst-arm"
+for CONFIGURATION in $CONFIGURATIONS; do
+    echo "Building OpenSSL for $CONFIGURATION"
 
-#     rm -rf $TEMP_PATH
-#     cp -r External/openssl /tmp/
+    rm -rf $TEMP_PATH
+    cp -r External/openssl /tmp/
 
-#     pushd $TEMP_PATH > /dev/null
+    pushd $TEMP_PATH > /dev/null
 
-#     LOG="/tmp/openssl-$CONFIGURATION.log"
-#     rm -f $LOG
+    LOG="/tmp/openssl-$CONFIGURATION.log"
+    rm -f $LOG
 
-#     OUTPUT_PATH=$ROOT_PATH/build/$CONFIGURATION
-#     rm -rf $OUTPUT_PATH
-#     mkdir -p $OUTPUT_PATH
+    OUTPUT_PATH=$ROOT_PATH/build/$CONFIGURATION
+    rm -rf $OUTPUT_PATH
+    mkdir -p $OUTPUT_PATH
 
-#     ./Configure "$CONFIGURATION" --config=$ROOT_PATH/ios-and-catalyst.conf --prefix=$OUTPUT_PATH no-shared >> $LOG 2>&1
-#     make >> $LOG 2>&1
-#     make install >> $LOG 2>&1
+    ./Configure "$CONFIGURATION" --config=$ROOT_PATH/ios-and-catalyst.conf --prefix=$OUTPUT_PATH no-shared >> $LOG 2>&1
+    make >> $LOG 2>&1
+    make install >> $LOG 2>&1
 
-#     popd > /dev/null
-# done
+    popd > /dev/null
+done
 
 echo "Creating the universal libraries for macOS"
 
