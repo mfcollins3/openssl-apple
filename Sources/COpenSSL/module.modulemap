@@ -1,0 +1,4 @@
+module COpenSSL {
+    header "COpenSSL.h"
+    export *
+}
