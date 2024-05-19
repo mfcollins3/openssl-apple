@@ -49,13 +49,13 @@ let package = Package(
         ),
         .binaryTarget(
             name: "libcrypto",
-			url: "https://github.com/mfcollins3/openssl-apple/releases/download/0.1.0/libcrypto.zip",
-			checksum: "29d19c355954188dcbf762423996ac9b35da857e5a9d5ba190ef6179fc78971d"
+			url: "https://github.com/mfcollins3/openssl-apple/releases/download/0.2.0/libcrypto.zip",
+			checksum: "ca7b824a98f7ec36653452dff53e1ee967cae8e8e821147fff38968fd3cc67ff"
         ),
         .binaryTarget(
             name: "libssl",
-			url: "https://github.com/mfcollins3/openssl-apple/releases/download/0.1.0/libssl.zip",
-			checksum: "f545d1fc66aa4400c7ae22ef394ef81ad46ded0ec017d56b0a0b4e4ab3d135d1"
+			url: "https://github.com/mfcollins3/openssl-apple/releases/download/0.2.0/libssl.zip",
+			checksum: "d8bfad9f31906b79485920d99ed035b53fe139c931b8945df9b890807a4e200e"
         )
     ]
 )
